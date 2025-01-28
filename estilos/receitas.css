@@ -59,7 +59,7 @@ main p {
 }
 
 ul#albumFotos {
-  width: 700px; /* Largura total do contêiner */
+  width: 100%; /* Ajustado para ser flexível */
   margin: 0 auto; /* Centraliza horizontalmente o álbum */
   margin-top: -30px;
   padding: 50px; /* Espaçamento interno ao redor das imagens */
@@ -68,123 +68,57 @@ ul#albumFotos {
   display: flex; /* Aplica layout flexbox para controle de alinhamento */
   justify-content: center; /* Centraliza horizontalmente as imagens */
   flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+  gap: 20px; /* Espaçamento entre as imagens */
 }
 
-/* Estilo dos itens individuais de imagem no álbum */
 ul#albumFotos li {
-  float: none; /* Remove o float para evitar conflitos com flexbox */
-  display: block; /* Garante que os itens se comportem como blocos */
-  width: 200px; /* Define a largura das imagens */
-  height: 200px; /* Define a altura das imagens */
-  margin: 10px; /* Espaçamento ao redor de cada imagem */
+  display: block;
+  width: 200px; /* Largura das imagens */
+  height: 200px; /* Altura das imagens */
+  background-color: #fff;
   border: 5px solid white; /* Borda branca ao redor das imagens */
-  background-color: #fff; /* Cor de fundo das imagens */
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para efeito de profundidade */
+  position: relative; /* Permite posicionamento da legenda */
+  overflow: hidden; /* Garante que nada ultrapasse o contorno do item */
 }
 
-/* Estilo da legenda das imagens */
+ul#albumFotos li img {
+  width: 100%; /* A imagem vai preencher o espaço disponível */
+  height: 100%;
+  object-fit: cover; /* Faz com que a imagem cubra todo o espaço sem distorcer */
+  transition: transform 0.3s ease; /* Transição suave no hover */
+}
+
+ul#albumFotos li:hover img {
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
 ul#albumFotos li span {
   opacity: 0; /* Torna o texto invisível inicialmente */
-  color: #fff; /* Cor do texto */
-  text-shadow: 1px 1px 1px #000; /* Sombra para melhor contraste do texto */
-  background-color: rgba(0, 0, 0, 0.3); /* Fundo semitransparente para o texto */
-  font-size: 1em; /* Tamanho da fonte */
-  line-height: 370px; /* Alinhamento vertical centralizado */
-  padding: 5px; /* Espaçamento interno ao redor do texto */
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1em;
+  line-height: 370px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
-/* Efeito de zoom ao passar o mouse sobre a imagem */
-ul#albumFotos li:hover {
-  transform: scale(1.5); /* Aumenta o tamanho da imagem no hover */
-  transition: all 0.5s ease-in; /* Transição suave */
-}
-
-/* Mostra a legenda ao passar o mouse */
 ul#albumFotos li:hover span {
-  opacity: 1; /* Torna o texto visível */
+  opacity: 1; /* Torna o texto visível ao passar o mouse */
 }
 
 #albumFotos a {
   text-decoration: none;
 }
 
-/* Configurações individuais para cada imagem */
-ul#albumFotos li#foto01 {
-  background: url("../imagens/galeria_receitas01.jpg") no-repeat;
-  background-position: 50% 50%; /* Centraliza a imagem */
-  background-size: 400px 400px; /* Define o tamanho inicial */
-  background-color: #fff;
-}
-
-ul#albumFotos li#foto01:hover {
-  background-position: 0px 0px; /* Redefine o posicionamento no hover */
-  background-size: 200px; /* Reduz o tamanho no hover */
-}
-
-ul#albumFotos li#foto02 {
-  background: url("../imagens/galeria_receitas02.jpg") no-repeat;
-  background-position: 50% 50%; /* Centraliza a imagem */
-  background-size: 400px 400px; /* Define o tamanho inicial */
-  background-color: #fff;
-}
-
-ul#albumFotos li#foto02:hover {
-  background-position: 0px 0px; /* Redefine o posicionamento no hover */
-  background-size: 200px; /* Reduz o tamanho no hover */
-}
-
-ul#albumFotos li#foto03 {
-  background: url("../imagens/galeria_receitas03.jpg") no-repeat;
-  background-position: 50% 50%; /* Centraliza a imagem */
-  background-size: 400px 400px; /* Define o tamanho inicial */
-  background-color: #fff;
-}
-
-ul#albumFotos li#foto03:hover {
-  background-position: 0px 0px; /* Redefine o posicionamento no hover */
-  background-size: 200px; /* Reduz o tamanho no hover */
-}
-
-ul#albumFotos li#foto04 {
-  background: url("../imagens/galeria_receitas04.jpg") no-repeat;
-  background-position: 50% 50%; /* Centraliza a imagem */
-  background-size: 400px 400px; /* Define o tamanho inicial */
-  background-color: #fff;
-}
-
-ul#albumFotos li#foto04:hover {
-  background-position: 0px 0px; /* Redefine o posicionamento no hover */
-  background-size: 200px; /* Reduz o tamanho no hover */
-}
-
-ul#albumFotos li#foto05 {
-  background: url("../imagens/galeria_receitas05.png") no-repeat;
-  background-position: 50% 50%; /* Centraliza a imagem */
-  background-size: 400px 400px; /* Define o tamanho inicial */
-  background-color: #fff;
-}
-
-ul#albumFotos li#foto05:hover {
-  background-position: 0px 0px; /* Redefine o posicionamento no hover */
-  background-size: 200px; /* Reduz o tamanho no hover */
-}
-
-ul#albumFotos li#foto06 {
-  background: url("../imagens/galeria_receitas06.jpg") no-repeat;
-  background-position: 50% 50%; /* Centraliza a imagem */
-  background-size: 400px 400px; /* Define o tamanho inicial */
-  background-color: #fff;
-}
-
-ul#albumFotos li#foto06:hover {
-  background-position: 0px 0px; /* Redefine o posicionamento no hover */
-  background-size: 200px; /* Reduz o tamanho no hover */
-}
-
 .button-container {
   display: flex;
-  gap: 10px; /* Espaçamento entre os botões */
-  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 10px;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
