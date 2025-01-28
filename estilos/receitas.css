@@ -20,7 +20,6 @@ body {
 
 header img {
   max-width: 100%;
-  height: auto;
   display: block;
   margin: auto;
   border-radius: 10px;
@@ -60,98 +59,148 @@ main p {
 }
 
 ul#albumFotos {
-  width: 100%;
-  margin: 0 auto;
+  width: 700px; /* Largura total do contêiner */
+  margin: 0 auto; /* Centraliza horizontalmente o álbum */
   margin-top: -30px;
-  padding: 50px;
-  overflow: hidden;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 50px; /* Espaçamento interno ao redor das imagens */
+  overflow: hidden; /* Evita que elementos ultrapassem o contêiner */
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Aplica layout flexbox para controle de alinhamento */
+  justify-content: center; /* Centraliza horizontalmente as imagens */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
 }
 
+/* Estilo dos itens individuais de imagem no álbum */
 ul#albumFotos li {
-  display: block;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  border: 5px solid white;
-  background-color: #fff;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
-  background-size: cover;
-  background-position: 50% 50%;
-  transition: transform .5s ease-in-out;
+  float: none; /* Remove o float para evitar conflitos com flexbox */
+  display: block; /* Garante que os itens se comportem como blocos */
+  width: 200px; /* Define a largura das imagens */
+  height: 200px; /* Define a altura das imagens */
+  margin: 10px; /* Espaçamento ao redor de cada imagem */
+   border: 5px solid white; /* Borda branca ao redor das imagens */
+  background-color: #fff; /* Cor de fundo das imagens */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .4); /* Sombra para efeito de profundidade */
 }
 
-ul#albumFotos li:hover {
-  transform: scale(1.1);
-}
-
+/* Estilo da legenda das imagens */
 ul#albumFotos li span {
-  opacity: 0;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  background-color: rgba(0, 0, 0, .3);
-  font-size: 1em;
-  line-height: 370px;
-  padding: 5px;
+  opacity: 0; /* Torna o texto invisível inicialmente */
+  color: #fff; /* Cor do texto */
+  text-shadow: 1px 1px 1px #000; /* Sombra para melhor contraste do texto */
+  background-color: rgba(0, 0, 0, .3); /* Fundo semitransparente para o texto */
+  font-size: 1em; /* Tamanho da fonte */
+  line-height: 370px; /* Alinhamento vertical centralizado */
+  padding: 5px; /* Espaçamento interno ao redor do texto */
 }
 
+/* Efeito de zoom ao passar o mouse sobre a imagem */
+ul#albumFotos li:hover {
+ transform: scale(1.5); /* Aumenta o tamanho da imagem no hover */
+  transition: all .5s ease-in; /* Transição suave */
+}
+
+/* Mostra a legenda ao passar o mouse */
 ul#albumFotos li:hover span {
-  opacity: 1;
+  opacity: 1; /* Torna o texto visível */
 }
 
 #albumFotos a {
   text-decoration: none;
 }
 
-/* Media Queries para responsividade */
-@media screen and (max-width: 768px) {
-  main {
-    padding: 20px;
-  }
-
-  ul#albumFotos li {
-    width: 150px;
-    height: 150px;
-  }
-
-  main h2 {
-    font-size: 2.5em;
-  }
-
-  .button-container {
-    display: block;
-    margin-top: 20px;
-  }
-
-  .btn-menu {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+/* Configurações individuais para cada imagem */
+ul#albumFotos li#foto01 {
+  background: url('../imagens/galeria_receitas01.jpg') no-repeat;
+  background-position: 50% 50%; /* Centraliza a imagem */
+  background-size: 400px 400px; /* Define o tamanho inicial */
+  background-color: #fff;
 }
 
-@media screen and (max-width: 480px) {
-  ul#albumFotos li {
-    width: 120px;
-    height: 120px;
-  }
+ul#albumFotos li#foto01:hover {
+  background-position: 0px 0px; /* Redefine o posicionamento no hover */
+  background-size: 200px; /* Reduz o tamanho no hover */
+}
 
-  main h2 {
-    font-size: 2em;
-  }
+ul#albumFotos li#foto02 {
+  background: url('../imagens/galeria_receitas02.jpg') no-repeat;
+  background-position: 50% 50%; /* Centraliza a imagem */
+  background-size: 400px 400px; /* Define o tamanho inicial */
+  background-color: #fff;
+}
 
-  .button-container {
-    display: block;
-    margin-top: 20px;
-  }
+ul#albumFotos li#foto02:hover {
+  background-position: 0px 0px; /* Redefine o posicionamento no hover */
+  background-size: 200px; /* Reduz o tamanho no hover */
+}
 
-  .btn-menu {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 1em;
-  }
+ul#albumFotos li#foto03 {
+  background: url('../imagens/galeria_receitas03.jpg') no-repeat;
+  background-position: 50% 50%; /* Centraliza a imagem */
+  background-size: 400px 400px; /* Define o tamanho inicial */
+  background-color: #fff;
+}
+
+ul#albumFotos li#foto03:hover {
+  background-position: 0px 0px; /* Redefine o posicionamento no hover */
+  background-size: 200px; /* Reduz o tamanho no hover */
+}
+
+ul#albumFotos li#foto04 {
+  background: url('../imagens/galeria_receitas04.jpg') no-repeat;
+  background-position: 50% 50%; /* Centraliza a imagem */
+  background-size: 400px 400px; /* Define o tamanho inicial */
+  background-color: #fff;
+}
+
+ul#albumFotos li#foto04:hover {
+  background-position: 0px 0px; /* Redefine o posicionamento no hover */
+  background-size: 200px; /* Reduz o tamanho no hover */
+}
+
+ul#albumFotos li#foto05 {
+  background: url('../imagens/galeria_receitas05.png') no-repeat;
+  background-position: 50% 50%; /* Centraliza a imagem */
+  background-size: 400px 400px; /* Define o tamanho inicial */
+  background-color: #fff;
+}
+
+ul#albumFotos li#foto05:hover {
+  background-position: 0px 0px; /* Redefine o posicionamento no hover */
+  background-size: 200px; /* Reduz o tamanho no hover */
+}
+
+ul#albumFotos li#foto06 {
+  background: url('../imagens/galeria_receitas06.jpg') no-repeat;
+  background-position: 50% 50%; /* Centraliza a imagem */
+  background-size: 400px 400px; /* Define o tamanho inicial */
+  background-color: #fff;
+}
+
+ul#albumFotos li#foto06:hover {
+  background-position: 0px 0px; /* Redefine o posicionamento no hover */
+  background-size: 200px; /* Reduz o tamanho no hover */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  margin-bottom: 20px;
+}
+
+.btn-menu {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: var(--cor03);
+  color: var(--cor05);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-menu:hover {
+  background-color: var(--cor04);
 }
 
 footer {
