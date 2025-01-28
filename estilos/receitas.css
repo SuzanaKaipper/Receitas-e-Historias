@@ -2,34 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Fleur+De+Leah&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/*
-  font-family: "Fleur De Leah", serif;
-  font-weight: 400;
-  font-style: normal;
-*/
-
-/*
-  font-family: "Roboto", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-*/
-
-/* 
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-*/
-
-/*
-  font-family: "Cookie", serif;
-  font-weight: 400;
-  font-style: normal;
-*/
-
 :root {
   --cor01: #f2e5bd;
   --cor02: #d9ae5f;
