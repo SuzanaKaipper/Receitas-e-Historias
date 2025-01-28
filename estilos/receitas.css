@@ -38,15 +38,15 @@ main {
   border-radius: 10px;
 }
 
-main h2{
-    color: var(--cor04);
-    background-color: var(--cor02);
-    font-family: var(--fonteDestaque);
-    font-size: 3em;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.208);
+main h2 {
+  color: var(--cor04);
+  background-color: var(--cor02);
+  font-family: var(--fonteDestaque);
+  font-size: 3em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.208);
 }
 
 main p {
@@ -77,9 +77,9 @@ ul#albumFotos li {
   width: 200px; /* Define a largura das imagens */
   height: 200px; /* Define a altura das imagens */
   margin: 10px; /* Espaçamento ao redor de cada imagem */
-   border: 5px solid white; /* Borda branca ao redor das imagens */
+  border: 5px solid white; /* Borda branca ao redor das imagens */
   background-color: #fff; /* Cor de fundo das imagens */
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, .4); /* Sombra para efeito de profundidade */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para efeito de profundidade */
 }
 
 /* Estilo da legenda das imagens */
@@ -87,7 +87,7 @@ ul#albumFotos li span {
   opacity: 0; /* Torna o texto invisível inicialmente */
   color: #fff; /* Cor do texto */
   text-shadow: 1px 1px 1px #000; /* Sombra para melhor contraste do texto */
-  background-color: rgba(0, 0, 0, .3); /* Fundo semitransparente para o texto */
+  background-color: rgba(0, 0, 0, 0.3); /* Fundo semitransparente para o texto */
   font-size: 1em; /* Tamanho da fonte */
   line-height: 370px; /* Alinhamento vertical centralizado */
   padding: 5px; /* Espaçamento interno ao redor do texto */
@@ -95,8 +95,8 @@ ul#albumFotos li span {
 
 /* Efeito de zoom ao passar o mouse sobre a imagem */
 ul#albumFotos li:hover {
- transform: scale(1.5); /* Aumenta o tamanho da imagem no hover */
-  transition: all .5s ease-in; /* Transição suave */
+  transform: scale(1.5); /* Aumenta o tamanho da imagem no hover */
+  transition: all 0.5s ease-in; /* Transição suave */
 }
 
 /* Mostra a legenda ao passar o mouse */
@@ -110,7 +110,7 @@ ul#albumFotos li:hover span {
 
 /* Configurações individuais para cada imagem */
 ul#albumFotos li#foto01 {
-  background: url('../imagens/galeria_receitas01.jpg') no-repeat;
+  background: url("../imagens/galeria_receitas01.jpg") no-repeat;
   background-position: 50% 50%; /* Centraliza a imagem */
   background-size: 400px 400px; /* Define o tamanho inicial */
   background-color: #fff;
@@ -122,7 +122,7 @@ ul#albumFotos li#foto01:hover {
 }
 
 ul#albumFotos li#foto02 {
-  background: url('../imagens/galeria_receitas02.jpg') no-repeat;
+  background: url("../imagens/galeria_receitas02.jpg") no-repeat;
   background-position: 50% 50%; /* Centraliza a imagem */
   background-size: 400px 400px; /* Define o tamanho inicial */
   background-color: #fff;
@@ -134,7 +134,7 @@ ul#albumFotos li#foto02:hover {
 }
 
 ul#albumFotos li#foto03 {
-  background: url('../imagens/galeria_receitas03.jpg') no-repeat;
+  background: url("../imagens/galeria_receitas03.jpg") no-repeat;
   background-position: 50% 50%; /* Centraliza a imagem */
   background-size: 400px 400px; /* Define o tamanho inicial */
   background-color: #fff;
@@ -146,7 +146,7 @@ ul#albumFotos li#foto03:hover {
 }
 
 ul#albumFotos li#foto04 {
-  background: url('../imagens/galeria_receitas04.jpg') no-repeat;
+  background: url("../imagens/galeria_receitas04.jpg") no-repeat;
   background-position: 50% 50%; /* Centraliza a imagem */
   background-size: 400px 400px; /* Define o tamanho inicial */
   background-color: #fff;
@@ -158,7 +158,7 @@ ul#albumFotos li#foto04:hover {
 }
 
 ul#albumFotos li#foto05 {
-  background: url('../imagens/galeria_receitas05.png') no-repeat;
+  background: url("../imagens/galeria_receitas05.png") no-repeat;
   background-position: 50% 50%; /* Centraliza a imagem */
   background-size: 400px 400px; /* Define o tamanho inicial */
   background-color: #fff;
@@ -170,7 +170,7 @@ ul#albumFotos li#foto05:hover {
 }
 
 ul#albumFotos li#foto06 {
-  background: url('../imagens/galeria_receitas06.jpg') no-repeat;
+  background: url("../imagens/galeria_receitas06.jpg") no-repeat;
   background-position: 50% 50%; /* Centraliza a imagem */
   background-size: 400px 400px; /* Define o tamanho inicial */
   background-color: #fff;
