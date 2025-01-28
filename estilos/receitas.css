@@ -58,61 +58,78 @@ main p {
   color: var(--cor04);
 }
 
+/* Container das imagens */
 ul#albumFotos {
-  width: 100%; /* Ajustado para ser flexível */
-  margin: 0 auto; /* Centraliza horizontalmente o álbum */
+  width: 700px;
+  margin: 0 auto;
   margin-top: -30px;
-  padding: 50px; /* Espaçamento interno ao redor das imagens */
-  overflow: hidden; /* Evita que elementos ultrapassem o contêiner */
-  list-style: none; /* Remove os marcadores da lista */
-  display: flex; /* Aplica layout flexbox para controle de alinhamento */
-  justify-content: center; /* Centraliza horizontalmente as imagens */
-  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
-  gap: 20px; /* Espaçamento entre as imagens */
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
 }
 
 ul#albumFotos li {
-  display: block;
-  width: 200px; /* Largura das imagens */
-  height: 200px; /* Altura das imagens */
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 5px solid white;
   background-color: #fff;
-  border: 5px solid white; /* Borda branca ao redor das imagens */
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para efeito de profundidade */
-  position: relative; /* Permite posicionamento da legenda */
-  overflow: hidden; /* Garante que nada ultrapasse o contorno do item */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+ul#albumFotos li:hover {
+  transform: scale(1.5);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
 
 ul#albumFotos li img {
-  width: 100%; /* A imagem vai preencher o espaço disponível */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz com que a imagem cubra todo o espaço sem distorcer */
-  transition: transform 0.3s ease; /* Transição suave no hover */
-}
-
-ul#albumFotos li:hover img {
-  transform: scale(1.1); /* Efeito de zoom */
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 ul#albumFotos li span {
-  opacity: 0; /* Torna o texto invisível inicialmente */
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  background-color: rgba(0, 0, 0, 0.3);
-  font-size: 1em;
-  line-height: 370px;
-  padding: 5px;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  pointer-events: none;
 }
 
 ul#albumFotos li:hover span {
-  opacity: 1; /* Torna o texto visível ao passar o mouse */
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#albumFotos a {
+ul#albumFotos li a {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  ul#albumFotos {
+    width: 100%;
+    gap: 10px;
+  }
+
+  ul#albumFotos li {
+    width: calc(50% - 10px);
+    height: 150px;
+  }
 }
 
 .button-container {
